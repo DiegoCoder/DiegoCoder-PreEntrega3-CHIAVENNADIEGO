@@ -9,13 +9,30 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-body button:hover {
+
+/*extend button*/
+button, .btn--small, .btn--big {
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.7rem 1.2rem;
+  background-color: #00d7ff;
+  color: white;
+}
+
+.btn--small {
+  width: button/2;
+}
+
+button:hover, .btn--big:hover, .btn--small:hover {
   background-color: #002ead;
   transition: 0.7s;
 }
 
+/*extend button*/
+/*mixin*/
 h1 {
-  font-size: 33px;
+  font-size: 50px;
 }
 
 h2 {
@@ -23,9 +40,10 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 18px;
 }
 
+/*mixin*/
 img {
   width: 100%;
 }
@@ -89,15 +107,6 @@ nav img {
 
 .textocontainer ul {
   padding-left: 10%;
-}
-
-button {
-  font-size: 13px;
-  font-weight: 600;
-  border-radius: 20px;
-  padding: 0.7rem 1.2rem;
-  background-color: #00d7ff;
-  color: white;
 }
 
 /*INDEX HEADER FIN*/
@@ -175,7 +184,7 @@ button {
   gap: 20px;
 }
 
-.asesoriacontainer button {
+.asesoriacontainer button, .asesoriacontainer .btn--big, .asesoriacontainer .btn--small {
   margin-bottom: 25px;
 }
 
@@ -311,7 +320,7 @@ button {
   padding: 15px;
 }
 
-.clientesfotos_container button {
+.clientesfotos_container button, .clientesfotos_container .btn--big, .clientesfotos_container .btn--small {
   margin-bottom: 3%;
 }
 
@@ -367,15 +376,13 @@ button {
   justify-content: space-between;
   gap: 5%;
 }
-.seccion_contacto .form-icontrol .ec,
-.seccion_contacto .form-icontrol .ca {
+.seccion_contacto .form-icontrol .btn--big {
   background: orange;
   color: white;
   padding: 5%;
   border-radius: 5%;
 }
-.seccion_contacto .form-icontrol .ec:hover,
-.seccion_contacto .form-icontrol .ca:hover {
+.seccion_contacto .form-icontrol .btn--big:hover {
   background-color: rgb(255, 123, 0);
 }
 .seccion_contacto .datos {
@@ -529,10 +536,13 @@ footer ul a {
     margin-bottom: 2%;
     margin-top: 2%;
   }
-  .transformaciondeclientescontainer button {
+  .transformaciondeclientescontainer button, .transformaciondeclientescontainer .btn--big, .transformaciondeclientescontainer .btn--small {
     margin-bottom: 2%;
   }
-  .fotocliente1:hover, .fotocliente2:hover, .fotocliente3:hover, .fotocliente4:hover {
+  .fotocliente1:hover,
+  .fotocliente2:hover,
+  .fotocliente3:hover,
+  .fotocliente4:hover {
     transform: scale(1.2);
   }
   /*INDEX TRANSFORMACION DE CLIENTES CONTAINER QUERIES FIN*/
@@ -603,6 +613,27 @@ footer ul a {
     text-align: center;
   }
   /* ASESORIAS SECCION ASESORIAS CONTAINER QUERIES FIN*/
+  /* FAQ FAQ CONTAINER QUERIES INICIO*/
+  .preguntascontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 5% 5% 0 5%;
+  }
+  .preguntascontainer .faqs {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 1%;
+    margin-bottom: 1.5%;
+    padding: 2%;
+    text-align: start;
+  }
+  .preguntascontainer .faqs p {
+    text-align: start;
+  }
+  /* FAQ FAQ CONTAINER QUERIES FIN*/
   /*FOOTER CONTAINER QUERIES INICIO*/
   footer {
     display: grid;
